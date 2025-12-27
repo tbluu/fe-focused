@@ -1,0 +1,16 @@
+# Các thư viện không được đẩy lên GitHub
+node_modules/
+
+# Thư mục build của Vite
+dist/
+
+# Các file rác của hệ điều hành
+.DS_Store
+Thumbs.db
+
+# Thông tin môi trường bí mật (nếu có)
+.env
+.env.local
+
+# File rác của Vercel
+.vercel
