@@ -3,6 +3,7 @@ import { useAuth } from "../../store/authStore";
 import api from "../../api/axios";
 import SubjectManagerModal from "../../components/SubjectManagerModal";
 import Dialog from "../../components/Dialog";
+import { playPipSound } from "../../utils/sound";
 
 export default function Home() {
   const { user, login } = useAuth();
@@ -107,6 +108,7 @@ export default function Home() {
       setMessage("Thời lượng tập trung tối thiểu là 5 phút.");
       return;
     }
+    playPipSound('start');
     setShowStartDialog(true);
   };
 
@@ -158,6 +160,7 @@ export default function Home() {
   };
 
   const triggerWarning = () => {
+    playPipSound('warning');
     setIsWarning(true);
     setIsActive(false);
     setWarningCount(10);

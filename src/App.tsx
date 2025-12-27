@@ -9,13 +9,13 @@ import AppLayout from "./layouts/AppLayout";
 export default function App() {
   return (
     <Routes>
-      {}
+      <Route path="/" element={<Navigate to="/homepage" replace />} />
+
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Route>
 
-      {}
       <Route
         element={
           <ProtectedRoute>
@@ -23,12 +23,10 @@ export default function App() {
           </ProtectedRoute>
         }
       >
-        {}
         <Route path="/homepage" element={<Home />} />
       </Route>
 
-      {}
-      <Route path="*" element={<Navigate to="/login" />} />
+      <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   );
 }
