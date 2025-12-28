@@ -331,7 +331,7 @@ export default function Home() {
               <div className="task-header">
                 <h3>Task hôm nay (tối đa 5 task)</h3>
                 <p className="task-reward-hint">
-                  Hoàn thành để nhận điểm thưởng
+                  Hoàn thành để nhận điểm thưởng +5đ
                 </p>
               </div>
               <div className="task-list-area">
